@@ -1,14 +1,9 @@
 import 'package:deal_it/widgets/auth_ui.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+ static const String id = 'login-screen';
 
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +13,6 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Expanded(
                 child: Container(
-                    // height: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.width,
                     color: Colors.white,
                     child: Column(
@@ -44,7 +38,15 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
                 child: Container(
               child: Authui(),
-            ))
+            )),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'If you continue, you are acceptin\nTerms and Condition and Privacy',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white, fontSize: 10),
+              ),
+            ),
           ],
         ),
       ),

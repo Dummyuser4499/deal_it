@@ -12,11 +12,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.amber,
-        body: Center(
-            child: Column(
+      backgroundColor: Colors.amber,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset(
+              'assets/images/main_logo.png',
+              height: 200,
+              width: 200,
+            ),
             SizedBox(
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -32,14 +37,19 @@ class _SplashScreenState extends State<SplashScreen> {
                       fontSize: 40.0,
                       fontFamily: 'Horizon',
                     ),
-                    child: AnimatedTextKit(animatedTexts: [
-                      RotateAnimatedText('DONE'),
-                    ]),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        RotateAnimatedText('DONE'),
+                        RotateAnimatedText('DONE'),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
           ],
-        )));
+        ),
+      ),
+    );
   }
 }

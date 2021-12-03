@@ -1,5 +1,6 @@
 import 'package:deal_it/screens/LoginScreen.dart';
 import 'package:deal_it/screens/SplashScreen.dart';
+import 'package:deal_it/screens/authentication/phoneauth_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -23,6 +24,10 @@ class _MainHomePageState extends State<MainHomePage> {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             home: LoginScreen(),
+            routes: {
+              LoginScreen.id: (context)=> LoginScreen(),
+              PhoneAuthScreen.id: (context)=> PhoneAuthScreen(),
+            },
           );
         }
       },
